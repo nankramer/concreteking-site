@@ -7,12 +7,15 @@ import { useState, useEffect } from "react";
 // ============================================================
 const CONFIG = {
   business: {
-    name: "ConcreteKing",
+    name: "Concrete King",
+    legalName: "Onyx Diamond (Pty) Ltd T/A Concrete King",
     tagline: "Concrete & Roofing Specialists",
-    phone: "+27 XX XXX XXXX",
-    whatsapp: "27XXXXXXXXXX",
+    phone: "+27749996777",
+    phoneDisplay: "074 999 6777",
+    whatsapp: "27749996777",
     email: "info@concreteking.co.za",
-    address: "Durban, KwaZulu-Natal",
+    address: "102 Cartmel Road, Palmiet, 4051",
+    addressShort: "Palmiet, Durban",
     established: "2015",
   },
   services: [
@@ -68,10 +71,9 @@ const CONFIG = {
     { id: 6, title: "Durban North — 45m Cantilever Retaining Wall", category: "retaining-walls", status: "Completed" },
   ],
   credentials: [
-    "Master Builders KZN Member",
     "NHBRC Registered",
-    "Fully Insured — R5M Public Liability",
-    "CIDB Graded",
+    "Master Builders KZN Member",
+    "Fully Insured",
   ],
 };
 
@@ -1111,8 +1113,11 @@ export default function HomePage() {
             </div>
             <p style={{ fontSize: 13, lineHeight: 1.7 }}>
               {CONFIG.business.tagline}. Professional concrete and roofing contractor serving Durban
-              and KwaZulu-Natal since {CONFIG.business.established}. Master Builders KZN member.
-              Fully insured.
+              and KwaZulu-Natal since {CONFIG.business.established}. NHBRC registered. Master Builders
+              KZN member.
+            </p>
+            <p style={{ fontSize: 11, color: C.dark, marginTop: 8 }}>
+              {CONFIG.business.legalName}
             </p>
           </div>
           <div>
@@ -1175,7 +1180,7 @@ export default function HomePage() {
               href={`tel:${CONFIG.business.phone}`}
               style={{ display: "block", fontSize: 13, color: C.mid, textDecoration: "none", marginBottom: 10 }}
             >
-              {CONFIG.business.phone}
+              {CONFIG.business.phoneDisplay}
             </a>
             <a
               href={`mailto:${CONFIG.business.email}`}
